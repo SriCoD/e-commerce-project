@@ -1,0 +1,34 @@
+.navbar{
+    height:80px;
+}
+.wrapper{
+    padding:10px 30 px;
+    display:flex;
+    justify-content: space-between;
+
+.left{
+display: flex;
+align-items:center;
+gap:25px;
+}
+
+.item{
+    display:flex;
+    align-items: center;
+    font-size:18px;
+}
+
+.right{
+    display: flex;
+    align-items:centre;
+}
+
+.centre{
+    display: flex;
+    align-items:center;
+
+    font-size:30px
+}
+
+
+}
