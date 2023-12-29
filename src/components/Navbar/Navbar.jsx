@@ -24,34 +24,50 @@ const Navbar = () => {
             <ExpandMoreIcon />
           </div>
           <div className="item">
-            <Link to="/products/1">Men</Link>
+            <Link className="link" to="/products/1">
+              Men
+            </Link>
           </div>
           <div className="item">
-            <Link to="/products/2">Women</Link>
+            <Link className="link" to="/products/2">
+              Women
+            </Link>
           </div>
           <div className="item">
-            <Link to="/products/3">Children</Link>
+            <Link className="link" to="/products/3">
+              Children
+            </Link>
           </div>
         </div>
         <div className="centre">
-          <Link to="/">Srishti Store</Link>
+          <Link className="link" to="/">
+            Srishti Store
+          </Link>
         </div>
-        <div className="item">
-          <Link to="/">Homepage</Link>
-        </div>
-        <div className="item">
-          <Link to="/">About Us</Link>
-        </div>
-        <div className="item">
-          <Link to="/">Contact Us</Link>
-        </div>
-        <div className="icons">
-          <SearchIcon />
-          <PersonIcon />
-          <FavoriteIcon />
-          <div className="cartIcon">
-            <ShoppingCartIcon />
-            <span>0</span>
+        <div className="right">
+          <div className="item">
+            <Link className="link" to="/">
+              Homepage
+            </Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/">
+              About Us
+            </Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/">
+              Contact Us
+            </Link>
+          </div>
+          <div className="icons">
+            <SearchIcon />
+            <PersonIcon />
+            <FavoriteIcon />
+            <div className="cartIcon">
+              <ShoppingCartIcon />
+              <span>0</span>
+            </div>
           </div>
         </div>
       </div>

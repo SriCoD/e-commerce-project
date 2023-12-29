@@ -16,11 +16,14 @@ gap:25px;
     display:flex;
     align-items: center;
     font-size:18px;
+    
 }
 
 .right{
     display: flex;
-    align-items:centre;
+    align-items:center;
+    gap:25px;
+    
 }
 
 .centre{
@@ -29,6 +32,28 @@ gap:25px;
 
     font-size:30px
 }
+.icons{
+    display:flex;
+    gap:15px;
+    color: #777;
+    cursor:pointer;
+}
 
+.cartIcon{
+    position:relative;
+    span{
+        font-size:12px;
+        width:20px;
+        height:20px;
+        color: white;
+        background-color: blue($color: #1724d7);
+        position:absolute;
+        right:-10px;
+        top:-10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 }
