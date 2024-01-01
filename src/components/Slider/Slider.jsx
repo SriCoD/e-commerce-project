@@ -2,27 +2,40 @@ import React from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Slider.scss";
+import { useState } from "react";
 
 const Slider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const data = [
-    "https://th.bing.com/th/id/R.0aa9e65e523f34d59db062c37611f2a6?rik=pQUkRuzaulwPhg&riu=http%3a%2f%2fimage26.stylesimo.com%2fo_img%2f2017%2f08%2f09%2f231420-10380357%2fwomen-s-elegant-solid-evening-pleated-chiffon-dress.jpg&ehk=QynjssnOzvA%2fXl9QTSY03RoGcE0DYfVmVYTUABtPA7o%3d&risl=&pid=ImgRaw&r=0",
-    "https://www.gotitabrands.com/wp-content/uploads/2019/05/Sleeveless-Maxi-Dresses-For-Women-Halter-Open-Back-Dress-With-Headscarf-Orange-Dress-1080x1620.jpg",
+    "https://images.pexels.com/photos/904117/pexels-photo-904117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1004642/pexels-photo-1004642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://www.instaloverz.com/wp-content/uploads/2016/07/3-classy-womens-fashion.jpg",
   ];
 
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
+  };
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
+  };
+
   return (
     <div className="slider">
-      <div className="container">
+      <div
+        className="container"
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+      >
         <img src={data[0]} alt="logos" />
         <img src={data[1]} alt="logos" />
         <img src={data[2]} alt="logos" />
       </div>
 
       <div className="icons">
-        <div className="icon">
+        <div className="icon" onClick={prevSlide}>
           <ArrowBackIcon />
         </div>
-        <div className="icon">
+        <div className="icon" onClick={nextSlide}>
           <ArrowForwardIcon />
         </div>
       </div>

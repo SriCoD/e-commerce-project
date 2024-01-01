@@ -7,12 +7,13 @@ position: relative;
         height: 100%;
         width:300vw;
         display: flex;
+        transition:all 1s ease;
     }
 
     img{
         height: 100%;
         width:100vw;
-        object-fit:initial;
+        object-fit:cover;
     }
 .icons{
     position:absolute;
