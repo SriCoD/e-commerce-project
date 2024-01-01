@@ -1,16 +1,15 @@
-import React from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import React, { useState } from "react";
+import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
+import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import "./Slider.scss";
-import { useState } from "react";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
-    "https://images.pexels.com/photos/904117/pexels-photo-904117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/1004642/pexels-photo-1004642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://www.instaloverz.com/wp-content/uploads/2016/07/3-classy-womens-fashion.jpg",
+    "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600",
   ];
 
   const prevSlide = () => {
@@ -26,17 +25,16 @@ const Slider = () => {
         className="container"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
-        <img src={data[0]} alt="logos" />
-        <img src={data[1]} alt="logos" />
-        <img src={data[2]} alt="logos" />
+        <img src={data[0]} alt="" />
+        <img src={data[1]} alt="" />
+        <img src={data[2]} alt="" />
       </div>
-
       <div className="icons">
         <div className="icon" onClick={prevSlide}>
-          <ArrowBackIcon />
+          <WestOutlinedIcon />
         </div>
         <div className="icon" onClick={nextSlide}>
-          <ArrowForwardIcon />
+          <EastOutlinedIcon />
         </div>
       </div>
     </div>
