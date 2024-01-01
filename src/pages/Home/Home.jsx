@@ -4,6 +4,7 @@ import "./Home.scss";
 import FeaturedProducts from "./../../components/FeaturedProducts/FeaturedProducts";
 import Categories from "./../../components/Categories/Categories";
 import Contact from "./../../components/Contact/Contact";
+import Product from "./../Product/Product";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <FeaturedProducts type="Trending" />
       <Categories />
       <Contact />
+      <Product />
     </div>
   );
 };

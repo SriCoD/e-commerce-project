@@ -6,8 +6,11 @@ import PersonIcon from "@mui/icons-material/Person";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./Navbar.scss";
+import { useState } from "react";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -64,13 +67,14 @@ const Navbar = () => {
             <SearchIcon />
             <PersonIcon />
             <FavoriteIcon />
-            <div className="cartIcon">
+            <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartIcon />
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
+      {open && <Cart />}
     </div>
   );
 };
